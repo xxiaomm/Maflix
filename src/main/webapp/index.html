@@ -1,0 +1,90 @@
+<!-- This page will be seen if you logged in -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MovieExpress</title>
+    <link rel="stylesheet" type="text/css" href="styles/button.css">
+</head>
+<body>
+Welcome to MovieExpress!
+<p id="sessionID"></p>
+<p id="lastAccessTime"></p>
+<form ACTION="#" id="cart" METHOD="get">
+    <label>Item Purchased</label>
+    <br>
+    <input type="text" required="required" name="item">
+    <input type="submit" VALUE="add">
+</form>
+<div id="item_list"></div>
+
+<button class="large green button" onclick="window.location.href ='login.html'">employee entrance</button>
+
+<h3>Browsing by Movie Genre</h3>
+<div>
+    <a href="movie-list.html?genre=Action&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Action</a>||
+    <a href="movie-list.html?genre=Adult&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Adult</a>||
+    <a href="movie-list.html?genre=Adventure&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Adventure</a>||
+    <a href="movie-list.html?genre=Animation&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Animation</a>||
+    <a href="movie-list.html?genre=Biography&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Biography</a>||
+    <a href="movie-list.html?genre=Comedy&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Comedy</a>||
+    <a href="movie-list.html?genre=Crime&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Crime</a>||
+    <a href="movie-list.html?genre=Documentary&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Documentary</a>||
+    <a href="movie-list.html?genre=Drama&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Drama</a>||
+    <a href="movie-list.html?genre=Family&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Family</a>||
+    <a href="movie-list.html?genre=Fantasy&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Fantasy</a>||
+    <a href="movie-list.html?genre=History&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">History</a>||
+    <a href="movie-list.html?genre=Horror&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Horror</a>||
+    <a href="movie-list.html?genre=Music&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Music</a>||
+    <a href="movie-list.html?genre=Musical&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Musical</a>||
+    <a href="movie-list.html?genre=Mystery&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Mystery</a>||
+    <a href="movie-list.html?genre=Reality-TV&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Reality-TV</a>||
+    <a href="movie-list.html?genre=Romance&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Romance</a>||
+    <a href="movie-list.html?genre=Sci-Fi&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Sci-Fi</a>||
+    <a href="movie-list.html?genre=Sport&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Sport</a>||
+    <a href="movie-list.html?genre=Thriller&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Thriller</a>||
+    <a href="movie-list.html?genre=War&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">War</a>||
+    <a href="movie-list.html?genre=Western&title=&year=&director=&name=&offset=0&limit=20&sortby=rd">Western</a>
+</div>
+
+<div id="alphabet-list">
+    <h3>Browsing by Movie Title</h3>
+</div>
+
+<div>
+    <form  method="get" action="movie-list.html">
+        <h3>Search with Condition</h3>
+        <input type="hidden" name="genre" value='' />
+        <p>title<input type="text" name="title" /></p>
+        <p>year<input type="text" name="year" /></p>
+        <p>director<input type="text" name="director" /></p>
+        <p>name<input type="text" name="name" /></p>
+        <input type="hidden" name="offset" value=0 />
+        <input type="hidden" name="limit" value=20 />
+        <input type="hidden" name="sortby" value="rd" />
+
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+</div>
+<br>
+<button class="large green button" onclick="window.location.href ='shopping-cart.html'">View Cart</button>
+
+<!-- include your own JS file -->
+<script src='https://code.jquery.com/jquery-3.1.0.min.js'></script>
+<script type='text/javascript' src='scripts/index.js'></script>
+<script type="text/javascript">
+    let starTableBodyElement = jQuery("#alphabet-list");
+    let rowHTML = "";
+    for(i=0;i<10;i++) {
+        rowHTML += "<a href=\"movie-list.html?genre=&title="+ i + "&year=&director=&name=&offset=0&limit=20&sortby=rd\">" + i +"</a>" + "  ||  ";
+    }
+    rowHTML += "<br>"
+    for(j=0;j<26;j++) {
+        i = String.fromCharCode(65+j);
+        rowHTML += "<a href=\"movie-list.html?genre=&title="+ i + "&year=&director=&name=&offset=0&limit=20&sortby=rd\">" + i +"</a>" + "  ||  ";
+    }
+    starTableBodyElement.append(rowHTML);
+</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!-- This page will be seen if you logged in as an employee -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/button.css">
+</head>
+
+<body>
+<h2>Welcome to Dashboard of Fablix, Dear Administrator!</h2>
+<p id="sessionID"></p>
+<p id="lastAccessTime"></p>
+
+<div>
+    <form id="insertStar_form" method="post" action="#" onSubmit="return myCheck();">
+        <h4>Insert a new star</h4>
+        <p>StarName(Required)<input type="text" name="name" /></p>
+        <p>Birthdate<input type="text" name="birthdate" /></p>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+</div>
+<div id="insert_message"></div><br>
+
+<div>
+    <form id="insertMovie_form" method="post" action="#">
+        <h4>Insert a new movie</h4>
+        <p>Title<input type="text" name="title" /></p>
+        <p>Year<input type="text" name="year" /></p>
+        <p>Director<input type="text" name="director" /></p>
+        <p>Star<input type="text" name="star" /></p>
+        <p>Birthdate<input type="text" name="birthdate" /></p>
+        <p>Genre<input type="text" name="genre" /></p>
+        <input type="submit" value="submit"/>
+        <input type="reset" value="reset"/>
+    </form>
+</div>
+
+<h4>Metadata of Moviedb</h4>
+<table id=metadata_table class="table table-striped">
+    <!-- Create a table header -->
+    <thead>
+    <tr>
+        <!-- Titles of each column-->
+        <th><b>table name</b></th>
+        <th><b>column name</b></th>
+        <th><b>column type</b></th>
+    </tr>
+    </thead>
+    <!-- Table body is left empty here, will be populated with the data retrieved with dashboard.js -->
+    <!-- Again, id "metadata_table_body" is useful for jQuery to find this html element -->
+    <tbody id=metadata_table_body></tbody>
+</table>
+
+
+<script>
+
+</script>
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="scripts/dashboard.js"></script>
+
+</body>
+</html>

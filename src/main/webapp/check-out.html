@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="styles/button.css">
+    <title>Check Out</title>
+</head>
+<body>
+<div id="item_list"></div>
+
+<div id="card">
+    <h1>Check Out</h1>
+    <form ACTION="#" id="cart" METHOD="post">
+        <label>Please insert the payment information</label>
+        <br>
+        First Name      : <input type="text" required="required" name="first-name"> <br><br>
+        Last Name       : <input type="text" required="required" name="last-name"> <br><br>
+        Credit Card     : <input type="text" required="required" name="credit-card"> <br><br>
+        Expiration Date : <input type="text" required="required" name="expiration-date"> <br><br>
+        <input type="submit" VALUE="CONFIRM">
+    </form>
+</div>
+<br>
+<button class="large blue button" onclick="window.location.href ='index.html'">Back to Search Page</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script type='text/javascript' src='scripts/check-out.js'></script>
+</body>
+</html>
